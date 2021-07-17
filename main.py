@@ -17,17 +17,18 @@ def user_input():
     return user_choice
 
 def check_win(i):
-    game_over = False
+ 
+    for item in row1:
+        if item != i:
+            return True
 
+    return False
+
+def print_scoreboard():
     for row in rows:
-        for item in row:
-            print(item)
-            print(i)
-            if item != i:
-                game_over = True
-                
+        print(f"\n{row}")     
     
-    return game_over
+
             
 
 
@@ -50,12 +51,15 @@ while game_is_on:
     if "_" in rows[user_choice[0] - 1][user_choice[1] - 1]:
         rows[user_choice[0] - 1][user_choice[1] - 1] = "X"
         game_is_on = check_win(i="X")
-        print(game_is_on)
+        
+    print_scoreboard()
+
+    if game_is_on == False:
+        break
 
     if "_" in rows[com_choice[0]][com_choice[1]]:
         rows[com_choice[0]][com_choice[1]] = "0"
         game_is_on = check_win(i="0")
-        print(game_is_on)
 
-    for row in rows:
-        print(f"\n{row}")
+
+
