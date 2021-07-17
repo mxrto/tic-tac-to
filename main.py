@@ -29,11 +29,6 @@ def print_scoreboard():
         print(f"\n{row}")     
     
 
-            
-
-
-
-
 row1 = ["_", "_", "_"]
 row2 = ["_", "_", "_"]
 row3 = ["_", "_", "_"]
