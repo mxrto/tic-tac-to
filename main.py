@@ -66,5 +66,3 @@ while game_is_on:
     print_scoreboard()
     if game_is_on == False:
         break
-
-#comment
